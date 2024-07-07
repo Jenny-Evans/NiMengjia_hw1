@@ -10,10 +10,3 @@ include_directories(inc)
 file(GLOB SOURCE_FILES "src/*.c")
 
 add_executable(AlgebraProject ${SOURCE_FILES})
-
-find_package(MATH_LIBRARY)
-if(MATH_LIBRARY_FOUND)
-    target_link_libraries(AlgebraProject ${MATH_LIBRARY})
-endif()
-
-target_compile_options(AlgebraProject PRIVATE -Wall)
