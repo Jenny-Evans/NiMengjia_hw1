@@ -64,3 +64,9 @@ Error: Matrix a and b must have the same rows and cols.
 将你的每个函数的测试运行结果以截图的形式放在你仓库的`README.md`文件中（请注意Markdown中图片的引用要包含源文件）。并将你的最终代码仓库链接（在浏览器上的那个，不要带有`.git`的）填写如下问卷发送：
 
 ![](https://tannin-1316822731.cos.ap-nanjing.myqcloud.com/%E3%80%8A%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E3%80%8B%E4%BD%9C%E4%B8%9A%E6%8F%90%E4%BA%A4.png)
+## 实现思路
+1.add_matrix、sub_matrix：遍历矩阵的每个元素，将对应元素的值相加/相减并存储在结果矩阵中。
+2.mul_matrix：结果矩阵行数等于 a 的行数，列数等于 b 的列数。用三重循环遍历结果矩阵的每个元素，执行矩阵乘法。
+3.scale_matrix：结果矩阵大小与原矩阵 a 相同。遍历矩阵 a 的每个元素，将其乘以标量 k 。
+4.transpose_matrix：结果矩阵行数等于原矩阵 a 的列数，列数等于原矩阵的行数。遍历矩阵 a 并交换行索引和列索引。
+5.trace_matrix：计算并返回矩阵主对角线上元素的和。
