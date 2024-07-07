@@ -103,11 +103,18 @@ int rank_matrix(Matrix a)
     return 0;
 }
 
-double trace_matrix(Matrix a)
-{
-    // ToDo
-    return 0;
+double trace_matrix(Matrix a) {
+    if (a.rows != a.cols) {
+        fprintf(stderr, "Error: The matrix must be a square matrix.\n");
+        return 0;
+    }
+    double trace = 0.0;
+    for (int i = 0; i < a.rows; i++) {
+        trace += a.data[i][i];
+    }
+    return trace;
 }
+
 
 void print_matrix(Matrix a)
 {
